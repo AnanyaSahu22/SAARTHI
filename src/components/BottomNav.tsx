@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, FileText, Stethoscope, Activity } from 'lucide-react';
+import { Home, FileText, Stethoscope, Activity, ShieldCheck } from 'lucide-react';
 import { Screen } from '../types';
 import { motion } from 'motion/react';
 
@@ -15,6 +15,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentScreen, onScreenCha
     { id: Screen.Records, label: 'Records', icon: FileText },
     { id: Screen.Doctors, label: 'Doctors', icon: Stethoscope },
     { id: Screen.Emergency, label: 'Emergency', icon: Activity },
+    { id: Screen.StaffPortal, label: 'Admin', icon: ShieldCheck },
   ];
 
   return (

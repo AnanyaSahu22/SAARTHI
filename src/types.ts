@@ -1,5 +1,8 @@
 
 export enum Screen {
+  Landing = 'landing',
+  Login = 'login',
+  StaffPortal = 'staff-portal',
   Home = 'home',
   Navigation = 'navigation',
   Doctors = 'doctors',
