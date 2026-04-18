@@ -1,0 +1,6 @@
+{
+  "name": "SAARTHI - Serene Health Navigator",
+  "description": "A high-end healthcare application providing turn-by-turn indoor hospital navigation, doctor availability tracking, appointment booking, and emergency assistance.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}

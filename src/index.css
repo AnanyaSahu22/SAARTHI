@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006976;
+  --color-primary-dim: #005c68;
+  --color-primary-fixed: #8be8fa;
+  --color-secondary: #006a6e;
+  --color-secondary-container: #8df3f8;
+  --color-on-secondary-container: #005b5f;
+  --color-tertiary: #286680;
+  --color-tertiary-container: #a0d9f8;
+  --color-on-tertiary-container: #004d67;
+  --color-error: #a83836;
+  --color-error-container: #fa746f;
+  --color-on-error-container: #6e0a12;
+  --color-on-error: #fff7f6;
+  
+  --color-surface: #f8fafb;
+  --color-on-surface: #2c3436;
+  --color-on-surface-variant: #596063;
+  --color-outline: #747c7e;
+  --color-outline-variant: rgba(172, 179, 182, 0.15);
+  
+  --color-surface-container-low: #f0f4f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e3e9eb;
+  --color-surface-container-highest: #dce4e6;
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply font-body bg-surface text-on-surface antialiased;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.perspective-map {
+  perspective: 1200px;
+}
+.rotated-map {
+  transform: rotateX(45deg) rotateZ(-15deg);
+}
+
+.glass-search {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #006976 0%, #8be8fa 100%);
+}
+
+.bg-emergency-gradient {
+  background: linear-gradient(135deg, #a83836 0%, #fa746f 100%);
+}
+
+@keyframes scan {
+  0%, 100% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  50% { top: 100%; opacity: 1; }
+  90% { opacity: 1; }
+  95% { opacity: 0; }
+}
+
+.scanning-line {
+  animation: scan 2.5s ease-in-out infinite;
+}
+
+.glow-teal {
+  box-shadow: 0 0 15px rgba(139, 232, 250, 0.5), inset 0 0 10px rgba(139, 232, 250, 0.3);
+}
